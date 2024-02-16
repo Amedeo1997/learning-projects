@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nail Style Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Nail Style Survey</h1>
+    <p id="description">Tell us about your favorite nail styles and preferences!</p>
+
+    <form id="survey-form">
+        <!-- Name -->
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <!-- Email -->
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <!-- Number (Age or Preference Rating) -->
+        <label for="number" id="number-label">Age (optional):</label>
+        <input type="number" id="number" name="number" min="10" max="100" placeholder="Age">
+
+        <!-- Nail Style Preference Dropdown -->
+        <label for="dropdown" id="dropdown-label">Favorite Nail Shape:</label>
+        <select id="dropdown" name="nail_shape">
+            <option value="round">Round</option>
+            <option value="square">Square</option>
+            <option value="oval">Oval</option>
+            <option value="almond">Almond</option>
+            <option value="coffin">Coffin/Ballerina</option>
+            <option value="stiletto">Stiletto</option>
+        </select>
+
+        <!-- Favorite Nail Art Style (Radio Buttons) -->
+        <p>Favorite Nail Art Style:</p>
+        <label><input type="radio" name="nail_art_style" value="classic" required> Classic French</label>
+        <label><input type="radio" name="nail_art_style" value="glitter"> Glitter</label>
+        <label><input type="radio" name="nail_art_style" value="marble"> Marble Effect</label>
+        <label><input type="radio" name="nail_art_style" value="ombre"> Ombre</label>
+        <label><input type="radio" name="nail_art_style" value="3d"> 3D Art</label>
+
+        <!-- Preferred Nail Care (Checkboxes) -->
+        <p>Preferred Nail Care:</p>
+        <label><input type="checkbox" name="nail_care" value="manicure"> Manicure</label>
+        <label><input type="checkbox" name="nail_care" value="pedicure"> Pedicure</label>
+        <label><input type="checkbox" name="nail_care" value="gel"> Gel Nails</label>
+        <label><input type="checkbox" name="nail_care" value="acrylic"> Acrylic Nails</label>
+
+        <!-- Additional Comments -->
+        <label for="comments">Additional Comments:</label>
+        <textarea id="comments" name="comments" placeholder="Your comments here..."></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit">Submit</button>
+    </form>
+</body>
+</html>
