@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark grey for text to ensure readability */
+  background-color: #fff; /* White background */
+}
+
+#navbar {
+  flex: 1;
+  max-width: 20%;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #ff0000; /* Red background for navbar */
+  padding: 20px;
+  color: #fff; /* White text for contrast */
+}
+
+#navbar header {
+  font-weight: 800;
+  font-size: 1.5em;
+}
+
+#main-doc {
+  flex: 3;
+  margin-left: 20%;
+  padding: 20px;
+  padding-right: 40px; /* Added padding for better layout */
+}
+
+.main-section {
+  margin-bottom: 40px; /* Increased margin for better spacing */
+}
+
+.main-section header {
+  color: #ff0000; /* Red headers within main-doc */
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ff0000; /* Red underline for headers */
+}
+
+.nav-link {
+  display: block;
+  margin: 10px 0px;
+  color: #fff; /* White text for navbar links */
+  text-decoration: none;
+  padding: 5px 0px; /* Padding for better touch target */
+}
+
+.nav-link:hover {
+  background-color: #cc0000; /* Darker red for hover state */
+  padding: 5px 10px; /* Increased padding for hover effect */
+  transition: 0.3s; /* Smooth transition for hover effect */
+}
+
+code {
+  background-color: #ffebeb; /* Very light red background for code */
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+ul {
+  padding-left: 20px; /* Indent for list */
+}
+
+li {
+  margin-bottom: 5px; /* Spacing between list items */
+}
+
+@media (max-width: 600px) {
+  body {
+    flex-direction: column;
+  }
+
+  #navbar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    max-width: 100%;
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  #main-doc {
+    margin-left: 0;
+    padding: 10px;
+  }
+}

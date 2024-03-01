@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header>Ruby Documentation</header>
+        <a class="nav-link" href="#Introduction">Introduction</a>
+        <a class="nav-link" href="#Syntax">Syntax</a>
+        <a class="nav-link" href="#Variables">Variables</a>
+        <a class="nav-link" href="#Control_Structures">Control Structures</a>
+        <a class="nav-link" href="#Data_Types">Data Types</a>
+        <a class="nav-link" href="#Methods_and_Functions">Methods and Functions</a>
+        <a class="nav-link" href="#Modules_and_Mixins">Modules and Mixins</a>
+        <a class="nav-link" href="#Object_Oriented_Programming">Object-Oriented Programming (OOP)</a>
+
+
+
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+          <header>Introduction</header>
+          <p>Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write.</p>
+          <p>Created by Yukihiro "Matz" Matsumoto in 1995, Ruby combines parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language that balances functional programming with imperative programming.</p>
+          <code>puts 'Hello, world!'</code>
+          <p>Ruby is used in web applications, web servers, system utilities, database work, backups, parsing, and even processing text files.</p>
+      </section>
+
+      <section class="main-section" id="Syntax">
+          <header>Syntax</header>
+          <p>Ruby's syntax is clean and concise, making the code highly readable. It follows the principle of least surprise (POLA) - the language behaves in such a way as to minimize confusion for experienced users.</p>
+          <code>5.times { print "We *love* Ruby -- it's out of this world!" }</code>
+          <ul>
+              <li>Everything in Ruby is an object.</li>
+              <li>Variables do not need to be declared before use.</li>
+              <li>Ruby uses <code>end</code> to close blocks.</li>
+          </ul>
+      </section>
+
+      <section class="main-section" id="Variables">
+          <header>Variables</header>
+          <p>In Ruby, variables are used to store information that can be referenced and manipulated in a program. They can hold different types of data, such as numbers, strings, and arrays.</p>
+          <code>name = "Ruby"</code>
+          <p>There are different types of variables in Ruby, including local variables, instance variables, class variables, and global variables.</p>
+          <ul>
+              <li>Local variables start with a lowercase letter or underscore.</li>
+              <li>Instance variables begin with <code>@</code>.</li>
+              <li>Class variables start with <code>@@</code>.</li>
+              <li>Global variables start with <code>$</code>.</li>
+          </ul>
+      </section>
+
+      <section class="main-section" id="Control_Structures">
+          <header>Control Structures</header>
+          <p>Ruby offers various control structures to direct the flow of your code, including conditionals, loops, and iterators.</p>
+          <code>if temperature &gt; 30 puts "It's a hot day!" else puts "It's not so hot." end</code>
+          <p>Commonly used control structures are <code>if</code>, <code>unless</code>, <code>while</code>, <code>for</code>, and <code>each</code> iterators.</p>
+      </section>
+
+      <section class="main-section" id="Data_Types">
+          <header>Data Types</header>
+          <p>Ruby supports a variety of data types, including simple numbers, strings, and more complex types like arrays and hashes.</p>
+          <code>days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]</code>
+          <p>Understanding the different data types is crucial for effective Ruby programming.</p>
+          <ul>
+              <li>Numbers can be integers or floats.</li>
+              <li>Strings are sequences of characters.</li>
+              <li>Arrays are ordered collections of objects.</li>
+              <li>Hashes are collections of key-value pairs.</li>
+          </ul>
+      </section>
+
+      <section class="main-section" id="Methods_and_Functions">
+        <header>Methods and Functions</header>
+        <p>Methods in Ruby are used to bundle one or more repeatable statements into a single unit. Methods can be defined using the <code>def</code> keyword and are invoked by their name.</p>
+        <code>def greet(name)
+      puts "Hello, #{name}!"
+    end
+
+    greet("Ruby")</code>
+        <p>Methods can take parameters and return values. The last expression evaluated in the method will be its return value.</p>
+        <ul>
+            <li>Defining a method: <code>def method_name; end</code></li>
+            <li>Method parameters: <code>def method_name(param1, param2); end</code></li>
+            <li>Return values explicitly using <code>return</code> keyword or implicitly with the last executed expression.</li>
+        </ul>
+    </section>
+
+    <section class="main-section" id="Modules_and_Mixins">
+      <header>Modules and Mixins</header>
+      <p>Modules in Ruby serve two primary purposes: namespacing and creating mixins. Namespacing allows you to define methods, classes, and constants in a separate space to avoid name clashes. Mixins provide a way to share functionality between classes without using inheritance.</p>
+      <p><strong>Module as Namespace:</strong></p>
+      <code>module MyModule
+    class MyClass
+      def my_method
+        puts "Hello from MyClass within MyModule!"
+      end
+    end
+  end
+
+  MyModule::MyClass.new.my_method</code>
+      <p><strong>Module as Mixin:</strong></p>
+      <code>module Greetable
+    def greet
+      puts "Hello, I'm a #{self.class}!"
+    end
+  end
+
+  class Person
+    include Greetable
+  end
+
+  class Robot
+    include Greetable
+  end
+
+  Person.new.greet
+  Robot.new.greet</code>
+      <ul>
+          <li><code>include</code> keyword is used to mix a module's methods into a class.</li>
+          <li>Modules cannot be instantiated like classes, but they can be mixed into classes to add behavior.</li>
+          <li>Namespacing helps organize and group related classes and methods, preventing naming conflicts.</li>
+      </ul>
+  </section>
+
+  <section class="main-section" id="Object_Oriented_Programming">
+    <header>Object-Oriented Programming (OOP)</header>
+    <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects", which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (often known as methods). Ruby is a pure object-oriented language, meaning everything in Ruby is an object, including primitive data types.</p>
+
+    <p><strong>Defining a Class and Creating Objects:</strong></p>
+    <code>class Dog
+  def initialize(name)
+    @name = name
+  end
+
+  def bark
+    puts "#{@name} says Bark!"
+  end
+end
+
+fido = Dog.new("Fido")
+fido.bark</code>
+
+    <p><strong>Inheritance:</strong></p>
+    <code>class Animal
+  def eat
+    puts "This animal is eating."
+  end
+end
+
+class Cat < Animal
+  def meow
+    puts "Meow!"
+  end
+end
+
+whiskers = Cat.new
+whiskers.eat
+whiskers.meow</code>
+
+    <p><strong>Encapsulation:</strong></p>
+    <code>class Person
+  def initialize(name)
+    @name = name
+  end
+
+  def name
+    @name
+  end
+
+  def name=(name)
+    @name = name
+  end
+end
+
+person = Person.new("John")
+puts person.name
+person.name = "Mike"
+puts person.name</code>
+
+    <ul>
+        <li>Classes encapsulate data for objects and define methods to interact with that data.</li>
+        <li>Inheritance allows a class to inherit behavior (methods) from another class.</li>
+        <li>Encapsulation hides the internal state of an object and requires all interaction to be performed through an object's methods, providing a clear interface for object interaction.</li>
+    </ul>
+</section>
+
+  </main>
+
+</body>
+</html>
