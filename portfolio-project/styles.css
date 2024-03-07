@@ -2,154 +2,145 @@ body, html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f0f5;
 }
 
 #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #333;
-  display: flex;
-  justify-content: space-around;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   z-index: 1000;
 }
 
-#navbar a {
+.logo {
   color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
 }
 
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-links a {
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: 20px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  color: #ddd;
+  border-radius: 5px;
 }
 
 #welcome-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 20px;
   height: 100vh;
-  background: radial-gradient(circle, rgba(23,23,23,1) 0%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to right, #0078f2, #00d4f3);
+  color: white; /* Ensure the text is visible against the background */
+}
+
+
+#welcome-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  background: -webkit-linear-gradient(white, #f0f0f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#welcome-section p {
+  font-size: 20px;
+  color: #f0f0f5;
+  margin-top: 20px;
+}
+
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+#contact {
+  background-color: #333;
   color: white;
 }
 
-#welcome-section h1 {
-  font-size: 2.5rem; /* Aumenta la dimensione del font */
-  font-weight: bold; /* Rendi il testo più grassetto */
-  margin: 0;
-  padding: 0;
-  line-height: 1.2;
+#contact a {
+  color: #00d4f3;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: text-decoration 0.3s ease-in-out;
 }
 
-#welcome-section .hello {
-  font-size: 3rem; /* Rendi "HELLO" più grande */
-  opacity: 0.9;
+#contact a:hover {
+  text-decoration: underline;
 }
 
-#welcome-section .name {
-  font-size: 4rem; /* Rendi "I'm Ahmed Salhi" ancora più grande */
-  opacity: 1;
-  margin-top: 20px; /* Distanza tra "HELLO" e il tuo nome */
-}
-
-
-.welcome-text {
-  flex-basis: 50%;
-}
-
-.welcome-image img {
-  max-width: 100%;
-  height: auto;
-
-}
-
-/* Assicurati che il layout sia reattivo */
-@media (max-width: 800px) {
-  #welcome-section {
-      flex-direction: column;
-      text-align: center;
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .welcome-text, .welcome-image {
-      flex-basis: 100%;
+  .nav-links a {
+    margin: 5px 0;
   }
-
-  .welcome-image {
-      margin-top: 20px;
-  }
-
-  @media (max-width: 800px) {
-    #welcome-section h1 {
-        font-size: 2rem;
-    }
-
-    #welcome-section .hello {
-        font-size: 2.5rem;
-    }
-
-    #welcome-section .name {
-        font-size: 3rem;
-    }
 }
-}
-
 
 #projects {
-  background-color: #333; /* Cambia colore per distinguere la sezione */
-  color: #fff;
-  padding: 20px;
-  text-align: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f5;
 }
 
-#project-slider {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .project-tile {
-  flex: 0 0 auto;
-  width: 100%;
-  max-width: 250px;
-  max-height: 500;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: transform 0.2s;
-}
-
-.project-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
 .project-tile a {
-  display: block;
-  background-color: #444; /* Leggermente diverso per contrasto */
-  color: white;
-  text-decoration: none;
-  padding: 10px;
+    text-decoration: none;
+    color: #333;
 }
 
-#slide-left, #slide-right {
-  cursor: pointer;
-  padding: 10px;
-  background-color: #555;
-  color: white;
-  border: none;
+.project-tile h3 {
+    color: #0078f2;
 }
 
-#slide-left:hover, #slide-right:hover {
-  background-color: #777;
+.project-tile:hover {
+    transform: scale(1.05);
 }
 
-/* Media query per gestire il layout su schermi più piccoli */
-@media (max-width: 600px) {
-  #navbar {
-      flex-direction: column;
-  }
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+    }
+
+    .project-tile {
+        width: auto;
+    }
 }

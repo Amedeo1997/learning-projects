@@ -3,56 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Ahmed Salhi | Web Developer</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav id="navbar">
-        <a href="#welcome-section">Welcome</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <div class="logo">AS</div>
+        <div class="nav-links">
+            <a href="#welcome-section">Welcome</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
+        </div>
     </nav>
 
     <section id="welcome-section">
-      <div class="welcome-text">
-          <h1 class="hello">Hello</h1>
-          <h1 class="name">I'm Ahmed Salhi</h1>
-      </div>
-  </section>
+        <h1>Ahmed Salhi</h1>
+        <p>A passionate Web Developer</p>
+    </section>
 
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </section>
 
-  <section id="projects">
-    <div id="project-slider">
+<section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-container">
         <div class="project-tile">
-            <img src="images/rails-watch-list.png" alt="Rails watch list">
-            <a href="https://github.com/Amedeo1997/rails-watch-list" target="_blank">Rails watch list</a>
+            <a href="https://codepen.io/Amedeo-Salhi/pen/jORboKa" target="_blank">
+                <h3>Nails Survey</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </a>
         </div>
         <div class="project-tile">
-            <img src="images/nftnb.png" alt="Nft and B">
-            <a href="https://github.com/Amedeo1997/nft-and-b" target="_blank">Nft and B</a>
+            <a href="https://codepen.io/Amedeo-Salhi/pen/gOyaJdM" target="_blank">
+                <h3>Tribute Page</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </a>
         </div>
         <div class="project-tile">
-            <img src="images/amigos.png" alt="Amigos">
-            <a href="https://github.com/AlexLeball/AMIGOS" target="_blank">Amigos</a>
+            <a href="https://codepen.io/Amedeo-Salhi/pen/MWRadqG" target="_blank">
+                <h3>Technical Documentation</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </a>
         </div>
     </div>
-    <button id="slide-left" type="button">&#10094;</button>
-    <button id="slide-right" type="button">&#10095;</button>
 </section>
 
 
-    <a id="profile-link" href="https://github.com/Amedeo1997" target="_blank"><img src="images/github-outline.svg" alt="github icon"></a>
-    <a  id="profile-link" href="https://www.linkedin.com/feed/" target="_blank"><img src="images/linkedin-circle.svg" alt="linkedin icon"></a>
-    <a  id="profile-link" href="https://www.instagram.com/amedeo_sali/" target="_blank"><img src="images/instagram-fill.svg" alt="instagram icon"></a>
-    <!-- Altre sezioni possono essere aggiunte qui -->
-    <script>
-      document.getElementById('slide-right').onclick = function () {
-          document.getElementById('project-slider').scrollLeft += 200;
-      };
-      document.getElementById('slide-left').onclick = function () {
-          document.getElementById('project-slider').scrollLeft -= 200;
-      };
-      </script>
+   <section id="contact">
+    <h2>Contact Me</h2>
+    <p>You can find me on GitHub or LinkedIn:</p>
+    <a id="profile-link" href="https://github.com/Amedeo1997" target="_blank">GitHub</a>
+    <br>
+    <a href="https://www.linkedin.com/in/ahmedsalhi" target="_blank">LinkedIn</a>
+</section>
 
 </body>
 </html>
