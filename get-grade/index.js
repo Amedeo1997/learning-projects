@@ -20,10 +20,14 @@ console.log(getGrade(82));
 console.log(getGrade(56));
 
 function hasPassingGrade(score) {
-
+  if (score < 60) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
-
-console.log(hasPassingGrade(100));
-console.log(hasPassingGrade(53));
-console.log(hasPassingGrade(87));
+console.log(hasPassingGrade(100)); // Output: true
+console.log(hasPassingGrade(53));  // Output: false
+console.log(hasPassingGrade(87));  // Output: true
+console.log(hasPassingGrade(60));  // Output: true
