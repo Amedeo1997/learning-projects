@@ -13,3 +13,14 @@ const everyone = ["dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel",
  }
 
   findNemo(large); // O(n) --> Linear Time
+
+ // Learning Big O Constant Time O(1);
+ 
+  const boxes = [1,2,3,4,5];
+
+  function logFirstTwoBoxes(boxes) {
+    console.log(boxes[0]); // O(1)
+    console.log(boxes[1]); // O(1)
+  }
+
+  logFirstTwoBoxes(boxes); // O(2) --> Constant Time
