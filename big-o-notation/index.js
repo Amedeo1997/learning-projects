@@ -57,3 +57,22 @@ function anotherFunChallenge(input) {
   let whoAmI = "I don't know"; // O(1)
 }
 // Big O = 4 + 7n = O(n)
+
+
+function compressBoxesTwice(boxes, boxes2) {
+  boxes.forEach(function(boxes) {
+    console.log(boxes);
+  });
+
+  boxes2.forEach(function(boxes) {
+    console.log(boxes);
+  });
+}
+
+// O(a + b) --> O(n + m) --> O(n)
+
+//Big O Rule Book
+// Rule 1: Worst Case
+// Rule 2: Remove Constants
+// Rule 3: Different terms for inputs
+// Rule 4: Drop Non Dominants
