@@ -15,7 +15,7 @@ const everyone = ["dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel",
   findNemo(large); // O(n) --> Linear Time
 
  // Learning Big O Constant Time O(1);
- 
+
   const boxes = [1,2,3,4,5];
 
   function logFirstTwoBoxes(boxes) {
@@ -24,3 +24,17 @@ const everyone = ["dory", "bruce", "marlin", "nemo", "gill", "bloat", "nigel",
   }
 
   logFirstTwoBoxes(boxes); // O(2) --> Constant Time
+
+  function funChallenge(input) {
+    let a = 10; // O(1)
+    a = 50 + 3; // O(1)
+
+    for (let i = 0; i < input.length; i++) { // O(n)
+      anotherFunction(); // O(n)
+      let stranger = true; // O(n)
+      a++; // O(n)
+    }
+    return a; // O(1)
+  }
+
+  funChallenge(); // O(3 + 4n) --> O(n)
