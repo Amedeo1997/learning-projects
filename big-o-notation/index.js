@@ -76,3 +76,16 @@ function compressBoxesTwice(boxes, boxes2) {
 // Rule 2: Remove Constants
 // Rule 3: Different terms for inputs
 // Rule 4: Drop Non Dominants
+
+const boxes = [0,1,2,3,4,5];
+function logAllPairsOfArray(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      console.log(array[i], array[j]);
+    }
+  }
+}
+
+logAllPairsOfArray(boxes); // O(n^2) --> Quadratic Time
+// every time you see nested loops you have to multiply the Big O notation
+// O(n) * O(n) = O(n^2)
