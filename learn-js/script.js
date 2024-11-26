@@ -1,27 +1,13 @@
-let a = 10;
-let b = 10;
+function canDrive(age) {
+  if (age < 18) {
+    console.log(`hai ${age} anni! non puoi guidare.`)
+  } else if (age >= 18 && age < 70) {
+    console.log(`hai ${age} anni! puoi guidare`);
+  } else {
+    console.log(`hai ${age} anni! Sei troppo vecchio meglio se smetti`);
+  }
+}
 
-//addizione
-console.log(a + b);
-//sottrazione
-console.log(a - b);
-//divisione
-console.log(a / b);
-//moltiplicazione
-console.log(a * b);
-//modulo
-console.log( a % b);
-
-const name = "Amedeo";
-let hello = "Ciao, mi chiamo " + name + "!";
-console.log(hello);
-hello = `Hello, mi chiamo ${name}!`;
-console.log(hello);
-
-let vero = true;
-let falso = false;
-let niente = null;
-let vuoto;
-let deciamle = 1.1;
-let intero = 1;
-console.log(vero, falso, niente, vuoto, deciamle, intero)
+canDrive(17);
+canDrive(19);
+canDrive(71);
