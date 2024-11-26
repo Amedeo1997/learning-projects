@@ -167,3 +167,10 @@ function calcolaIva(price, iva) {
 }
 
 console.log(calcolaIva(10, 22));
+
+function salutaUtente(nome = "Utente") {
+  console.log(`Ciao ${nome}!`);
+}
+
+salutaUtente();
+salutaUtente("Amedeo");
