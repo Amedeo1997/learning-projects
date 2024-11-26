@@ -157,3 +157,13 @@ function trovaMaggiore(a, b) {
 trovaMaggiore(5, 10);
 trovaMaggiore(12, 6);
 trovaMaggiore(10, 10);
+
+const quadrato = (x) => x * x;
+console.log(quadrato(10));
+
+function calcolaIva(price, iva) {
+ iva = (price * iva) / 100;
+ return price + iva;
+}
+
+console.log(calcolaIva(10, 22));
