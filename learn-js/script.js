@@ -103,6 +103,7 @@ function numeriDispari() {
 }
 
 //numeriDispari();
+/* do {
 
 let numbers = [3, 7, 12, 45, 23];
 
@@ -120,7 +121,6 @@ const numeroSegreto = 7;
 let tentativo;
 
 // Ciclo do...while
-do {
     // Chiediamo all'utente di inserire un numero
     tentativo = parseInt(prompt("Indovina il numero (tra 1 e 10):"));
 
@@ -135,3 +135,25 @@ do {
 
 // Quando il ciclo termina
 console.log("Complimenti! Hai indovinato il numero:", numeroSegreto);
+
+*/
+
+const calcolaArea = (a, b) => a * b;
+console.log(calcolaArea(20,10));
+
+const salutoPersonalizzato = (name) => console.log(`Ciao ${name}!`);
+salutoPersonalizzato("cane");
+
+function trovaMaggiore(a, b) {
+  if (a > b) {
+    console.log(a);
+  } else if (a < b) {
+    console.log(b);
+  } else {
+    console.log('uguali');
+  }
+};
+
+trovaMaggiore(5, 10);
+trovaMaggiore(12, 6);
+trovaMaggiore(10, 10);
