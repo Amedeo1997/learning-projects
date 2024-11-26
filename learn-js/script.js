@@ -174,3 +174,15 @@ function salutaUtente(nome = "Utente") {
 
 salutaUtente();
 salutaUtente("Amedeo");
+
+function calcolaMedia(a = 0, b = 0) {
+  media = (a + b) / 2;
+  if (media >5) {
+    console.log(`la media e' di ${media}, ben fatto!`)
+} else {
+    console.log(`la media e' di ${media}, molto male!`)
+  }
+}
+
+console.log(calcolaMedia(5, 10));
+console.log(calcolaMedia());
