@@ -22,3 +22,39 @@ function isPari(n) {
 
 isPari(10);
 isPari(9);
+
+function dayOfTheWeek(day) {
+  switch (day) {
+    case "lunedì":
+      console.log(`e' ${day}! Inizia la settimana`);
+      break;
+
+    case "martedì":
+      console.log(`e' ${day}! Ancora un po' di fatica`);
+      break;
+
+    case "mercoledì":
+      console.log(`e' ${day}! Meta settimana andata dai`);
+      break;
+
+    case "giovedì":
+      console.log(`e' ${day}! Non mollare ci sei quasi`);
+      break;
+      case "venerdì":
+        console.log(`e' ${day}! Siamo alla fine!!!`);
+        break;
+
+    case "sabato":
+    case "domenica":
+        console.log(`e' ${day}! Buon weekend :)`);
+        break;
+   }
+}
+
+dayOfTheWeek("sabato");
+dayOfTheWeek("domenica");
+dayOfTheWeek('lunedì');
+dayOfTheWeek('martedì');
+dayOfTheWeek('mercoledì');
+dayOfTheWeek('giovedì');
+dayOfTheWeek('venerdì');
