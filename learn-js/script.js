@@ -58,3 +58,18 @@ dayOfTheWeek('martedì');
 dayOfTheWeek('mercoledì');
 dayOfTheWeek('giovedì');
 dayOfTheWeek('venerdì');
+
+function comparareValori(a, b) {
+  if (a <= b && a === b) {
+    console.log(`${a} e ${b} sono lo stesso numero`);
+  } else if ( a >= b || a <= b ) {
+    console.log("non sono lo stesso numero");
+  } else {
+    console.log("non hanno valore");
+  }
+}
+
+
+comparareValori(1, 1);
+comparareValori(1, 2);
+comparareValori(2, 1);
