@@ -11,3 +11,14 @@ function canDrive(age) {
 canDrive(17);
 canDrive(19);
 canDrive(71);
+
+function isPari(n) {
+  if (n % 2 === 0) {
+    console.log(`${n} e' un numero pari`);
+  } else {
+    console.log(`${n} e' un numero dispari`);
+  }
+}
+
+isPari(10);
+isPari(9);
