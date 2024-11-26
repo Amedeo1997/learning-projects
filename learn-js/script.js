@@ -73,3 +73,65 @@ function comparareValori(a, b) {
 comparareValori(1, 1);
 comparareValori(1, 2);
 comparareValori(2, 1);
+
+function numberToTen() {
+  for (let i = 0; i <= 10; i++) {
+    if (i === 11) break;
+    console.log(i);
+  }
+}
+
+//numberToTen();
+
+function numberSum() {
+  let i = 0
+  let b = 1
+  while (i <= 100) {
+    console.log(`${i + b}`);
+    i++
+    b++
+  }
+}
+
+//numberSum();
+
+function numeriDispari() {
+  for (let i = 0; i <= 10; i++) {
+    if (i % 2 === 0) continue;
+    console.log(i)
+  }
+}
+
+//numeriDispari();
+
+let numbers = [3, 7, 12, 45, 23];
+
+for (let i = 0; i < numbers.length; i++) {
+  if (numbers[i] > 20) {
+    console.log(`trovato: ${numbers[i]}`);
+    break;
+  }
+}
+
+// Numero segreto da indovinare
+const numeroSegreto = 7;
+
+// Variabile per memorizzare il tentativo dell'utente
+let tentativo;
+
+// Ciclo do...while
+do {
+    // Chiediamo all'utente di inserire un numero
+    tentativo = parseInt(prompt("Indovina il numero (tra 1 e 10):"));
+
+    // Controlliamo il tentativo
+    if (tentativo > numeroSegreto) {
+        console.log("Troppo alto! Riprova.");
+    } else if (tentativo < numeroSegreto) {
+        console.log("Troppo basso! Riprova.");
+    }
+
+} while (tentativo !== numeroSegreto); // Continua finché l'utente non indovina
+
+// Quando il ciclo termina
+console.log("Complimenti! Hai indovinato il numero:", numeroSegreto);
