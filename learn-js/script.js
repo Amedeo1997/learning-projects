@@ -1,3 +1,5 @@
+
+
 function canDrive(age) {
   if (age < 18) {
     console.log(`hai ${age} anni! non puoi guidare.`)
@@ -186,3 +188,4 @@ function calcolaMedia(a = 0, b = 0) {
 
 console.log(calcolaMedia(5, 10));
 console.log(calcolaMedia());
+console.log(calcolaMedia(5));
